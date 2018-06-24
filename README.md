@@ -145,8 +145,8 @@ Once your daemon is synced with the network start your turtle-service and redis-
 Clone the repository and run `npm install` for all the dependencies to be installed:
 
 ```bash
-git clone https://github.com/turtlecoin/turtle-pool turtle-pool
-cd turtle-pool
+git clone https://github.com/wrkzcoin/wrkzcoin-pool wrkzcoin-pool
+cd wrkzcoin-pool
 npm install && npm test
 ```
 
@@ -156,16 +156,16 @@ npm install && npm test
 Explanation for each field:
 ```javascript
 /* Used for storage in redis so multiple coins can share the same redis instance. */
-"coin": "dashcoin",
+"coin": "Wrkzcoin",
 
 /* Used for front-end display */
-"symbol": "DSH",
+"symbol": "Wrkz",
 
 /* Minimum units in a single coin, see COIN constant in DAEMON_CODE/src/cryptonote_config.h */
-"coinUnits": 1000000000000,
+"coinUnits": 100,
 
 /* Coin network time to mine one block, see DIFFICULTY_TARGET constant in DAEMON_CODE/src/cryptonote_config.h */
-"coinDifficultyTarget": 120,
+"coinDifficultyTarget": 60,
 
 "logging": {
 
@@ -201,7 +201,7 @@ Explanation for each field:
     "clusterForks": "auto",
 
     /* Address where block rewards go, and miner payments come from. */
-    "poolAddress": "D6WLtrV1SBWV8HWQzQv8uuYuGy3uwZ8ah5iT5HovSqhTKMauquoTsKP8RBJzVqVesX87poYWQgkGWB4NWHJ6Ravv93v4BaE"
+    "poolAddress": "insert-your-pool-wallet-address-here"
 
     /* Poll RPC daemons for new blocks every this many milliseconds. */
     "blockRefreshInterval": 1000,
