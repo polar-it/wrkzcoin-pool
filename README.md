@@ -289,10 +289,11 @@ Explanation for each field:
     "enabled": true,
     "interval": 600, //how often to run in seconds
     "maxAddresses": 50, //split up payments if sending to more than this many addresses
-    "transferFee": 5000000000, //fee to pay for each transaction
-    "minPayment": 100000000000, //miner balance required before sending payment
-    "maxTransactionAmount": 0, //split transactions by this amount(to prevent "too big transaction" error)
-    "denomination": 100000000000 //truncate to this precision and store remainder
+    "mixin": 3, //number of transactions yours is indistinguishable from
+    "transferFee": 100, //fee to pay for each transaction
+    "minPayment": 20000, //miner balance required before sending payment
+    "maxTransactionAmount": 30000000, //split transactions by this amount(to prevent "too big transaction" error)
+    "denomination": 100 //truncate to this precision and store remainder
 },
 
 /* Module that monitors the submitted block maturities and manages rounds. Confirmed
@@ -304,7 +305,7 @@ Explanation for each field:
 
     /* Block depth required for a block to unlocked/mature. Found in daemon source as
        the variable CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW */
-    "depth": 60,
+    "depth": 40,
     "poolFee": 1.8, //1.8% pool fee (2% total fee total including donations)
     "devDonation": 0.1, //0.1% donation to send to pool dev - only works with Monero
     "coreDevDonation": 0.1 //0.1% donation to send to core devs - works with Bytecoin, Monero, Dashcoin, QuarazCoin, Fantoncoin, AEON and OneEvilCoin
@@ -325,13 +326,13 @@ Explanation for each field:
 /* Coin daemon connection details. */
 "daemon": {
     "host": "127.0.0.1",
-    "port": 29081
+    "port": 17856
 },
 
 /* Wallet daemon connection details. */
 "wallet": {
     "host": "127.0.0.1",
-    "port": 29082,
+    "port": 8089,
     "password": "<replace with rpc password>"
 },
 
